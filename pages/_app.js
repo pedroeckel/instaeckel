@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components'
-import theme from '../pages/src/theme'
-import GlobalStyle from './src/theme/GlobalStyle'
+import theme from '../src/theme'
+import GlobalStyle from '../src/theme/GlobalStyle'
 import Head from 'next/head'
 
 

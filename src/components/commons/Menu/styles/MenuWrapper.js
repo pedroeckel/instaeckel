@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components';
 
 export const MenuWrapper = styled.nav`
-font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,15 +9,15 @@ font-family: 'Rubik', sans-serif;
   margin-top: 18px;
   padding-left: 28px;
   padding-right: 28px;
-`; 
-
-MenuWrapper.LeftSide = styled.div`
-padding: 0;
-margin: 0;
-order:1;
 `;
 
-MenuWrapper.CentralSide = styled.div `
+MenuWrapper.LeftSide = styled.div`
+  padding: 0;
+  margin: 0;
+  order: 1;
+`;
+
+MenuWrapper.CentralSide = styled.div`
   padding: 0;
   margin: 0;
   order: 3;
@@ -30,6 +30,7 @@ MenuWrapper.CentralSide = styled.div `
   border-top: 1px solid #88989E;
   border-bottom: 1px solid #88989E;
   padding: 12px;
+  
   a {
     text-align: center;
     display: block;
@@ -42,13 +43,15 @@ MenuWrapper.CentralSide = styled.div `
       color: #070C0E;
       
     }
-}`;
+  }
+`;
 
-MenuWrapper.RightSide = styled.div `
+MenuWrapper.RightSide = styled.div`
   padding: 0;
   margin: 0;
   display: flex;
   flex: 1;
   order: 2;
   justify-content: flex-end;
+  
 `;
