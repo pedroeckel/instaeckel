@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../../../theme/Button';
 import { Logo } from '../../../theme/Logo';
 import { MenuWrapper } from "./styles/MenuWrapper";
 
@@ -27,8 +28,8 @@ export default function Menu() {
        <MenuWrapper.CentralSide>
          {links.map (function (link){
              return (
-                <li>
-                    <a href={links.url}>
+                <li key={link.url}>
+                    <a href={link.url}>
                         {link.texto}
                     </a>
                 </li>
@@ -38,12 +39,12 @@ export default function Menu() {
          })}
        </MenuWrapper.CentralSide>
       <MenuWrapper.RightSide>
-         <button>
+         <Button ghost variant="secondary.main">
              Entrar
-         </button>
-         <button>
+         </Button>
+         <Button variant="primary.main">
              Cadastrar
-         </button>
+         </Button>
       </MenuWrapper.RightSide>
 
     </MenuWrapper>
