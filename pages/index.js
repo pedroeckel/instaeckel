@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../src/components/commons/Button';
 import Footer from '../src/components/commons/Footer';
 import Menu from '../src/components/commons/Menu';
+import { Grid } from '../src/components/foundation/layout/Grid';
 import { Text } from '../src/components/foundation/Text';
 
 
@@ -15,8 +16,14 @@ export default function Home() {
     justifyContent: 'space-between',
   }}>
     <Menu />
-    <div>
-        <Text
+
+    <Grid.Container>
+      <Grid.Row>
+        <Grid.Col
+          value={{ xs:12, md:5 }}
+          offset={{ xs:0, md:1}}
+        >
+         <Text
           variant="title"
           tag="h1"
           color="tertiary.main"
@@ -37,12 +44,8 @@ export default function Home() {
           }}
       
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at
-          massa sed risus luctus fermentum. Praesent eu posuere mauris. Vivamus
-          sit amet odio nibh. Ut maximus nibh ac sapien aliquam consequat. In
-          volutpat, lectus quis molestie lobortis, tellus odio auctor lectus, in
-          dignissim lectus libero vitae libero. Vestibulum nisl urna, auctor sit
-          amet porta tincidunt, mattis quis arcu. 
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.
         </Text>
 
         <Button
@@ -55,7 +58,20 @@ export default function Home() {
         >
           Cadastrar
         </Button>
-      </div>
+        </Grid.Col>
+        <Grid.Col
+        value={{ xs:12, md:6 }}
+        >
+          <img
+              style={{ display: 'block', margin: 'auto' }}
+              src="https://bootcamp-alura-01-git-modulo01.omariosouto.vercel.app/images/phones.png"
+            />
+        </Grid.Col>
+      </Grid.Row>
+
+    </Grid.Container>
+
+    
     <Footer />
     </div>
   )
