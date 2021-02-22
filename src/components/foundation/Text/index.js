@@ -39,7 +39,7 @@ export default function Text({ tag, variant, children }) {
 Text.propTypes = {
     tag: PropTypes.string.isRequired,
     variant: PropTypes.string.isRequired,
-    childern: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 
 
 }
