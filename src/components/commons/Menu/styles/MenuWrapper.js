@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { TextStyleVariantsMap } from "../../../foundation/Text";
+import { TextStyleVariants } from "../../../foundation/Text";
 import { breakpointsMedia } from "../../../../theme/utils/breakpointsMedia";
 
 export const MenuWrapper = styled.nav`
@@ -85,8 +85,8 @@ MenuWrapper.CentralSide = styled.div`
     }
     ${
       breakpointsMedia({
-        xs: TextStyleVariantsMap.smallestException,
-        md: TextStyleVariantsMap.paragraph1,
+        xs: TextStyleVariants.smallestException,
+        md: TextStyleVariants.paragraph1,
       })
     }
   }

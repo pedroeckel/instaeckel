@@ -1,6 +1,6 @@
 import styled, {css} from "styled-components";
 import get from "lodash/get";
-import { TextStyleVariantsMap } from "../../foundation/Text";
+import { TextStyleVariants } from "../../foundation/Text";
 import { breakpointsMedia } from "../../../theme/utils/breakpointsMedia";
 
 const ButtonGhost = css`
@@ -28,8 +28,8 @@ export const Button = styled.button`
   }
   ${
     breakpointsMedia({
-      xs: TextStyleVariantsMap.smallestException,
-      md: TextStyleVariantsMap.paragraph1,
+      xs: TextStyleVariants.smallestException,
+      md: TextStyleVariants.paragraph1,
     })
   }
 `
