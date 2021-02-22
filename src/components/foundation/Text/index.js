@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import PropTypes from 'prop-types';
+import { propToStyle } from "../../../theme/utils/propToStyle";
 
 const smallestException = css`
   ${
@@ -23,24 +24,30 @@ const paragraph1 = css`
       `
     } 
   }
-`
+`;
 
 export const TextStyleVariants = {
   smallestException,
   paragraph1
 }
 
+
+
 const TextBase = styled.span`
   ${
     ({variant}) => TextStyleVariants[variant]
   }
-`;
 
-export function Text({children, variant, tag}){
+  ${propToStyle('textAlign')}
+
+`
+
+export function Text({children, variant, tag, ...props }){
   return(
     <TextBase
       variant={variant}
       as={tag}
+      {...props}
     >
       {children}
     </TextBase>
