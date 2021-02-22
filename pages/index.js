@@ -22,6 +22,10 @@ export default function Home() {
         <Grid.Col
           value={{ xs:12, md:5 }}
           offset={{ xs:0, md:1}}
+          display="flex"
+          alignItens="flex-start"
+          justifyContent="center"
+          flexDirection="column"
         >
          <Text
           variant="title"
@@ -49,15 +53,15 @@ export default function Home() {
         </Text>
 
         <Button
-          margin = {{
-            xs: 'auto',
-            md: 'initial',
-          }}
-          display="block"
-          variant="primary.main"
-        >
-          Cadastrar
-        </Button>
+              margin={{
+                xs: 'auto',
+                md: 'initial',
+              }}
+              display="block"
+              variant="primary.main"
+            >
+              Cadastrar
+          </Button>
         </Grid.Col>
         <Grid.Col
         value={{ xs:12, md:6 }}
