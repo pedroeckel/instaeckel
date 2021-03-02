@@ -14,8 +14,8 @@ const links  = [
     url: '/faq'
   },
   {
-    texto: 'Sobre',
-    url: '/sobre'
+    texto: 'Sobr',
+    url: '/sobr'
   },
 ]
 export default function Menu() {
