@@ -12,6 +12,7 @@
   "dependencies": {
     "@crello/react-lottie": "0.0.11",
     "framer-motion": "^3.10.5",
+    "husky": "^5.2.0",
     "lodash": "^4.17.20",
     "next": "latest",
     "prop-types": "^15.7.2",
@@ -31,5 +32,12 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0"
   },
+
+    "husky": {
+      "hooks": {
+        "pre-push": "npm run lint"
+      }
+  },
+
   "license": "MIT"
 }
