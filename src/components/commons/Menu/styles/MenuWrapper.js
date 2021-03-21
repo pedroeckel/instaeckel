@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import { TextStyleVariants } from "../../../foundation/Text";
-import { breakpointsMedia } from "../../../../theme/utils/breakpointsMedia";
+import { TextStyleVariantsMap } from '../../../foundation/Text';
+import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 export const MenuWrapper = styled.nav`
   font-family: 'Rubik', sans-serif;
@@ -84,11 +84,11 @@ MenuWrapper.CentralSide = styled.div`
       
     }
     ${
-      breakpointsMedia({
-        xs: TextStyleVariants.smallestException,
-        md: TextStyleVariants.paragraph1,
-      })
-    }
+  breakpointsMedia({
+    xs: TextStyleVariantsMap.smallestException,
+    md: TextStyleVariantsMap.paragraph1,
+  })
+}
   }
 `;
 
