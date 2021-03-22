@@ -3,7 +3,7 @@ import { Button } from '../src/components/commons/Button';
 import Footer from '../src/components/commons/Footer';
 import Menu from '../src/components/commons/Menu';
 import Modal from '../src/components/commons/Modal';
-import Box from '../src/components/foundation/layout/Box';
+import { Box } from '../src/components/foundation/layout/Box';
 import { Grid } from '../src/components/foundation/layout/Grid';
 import Text from '../src/components/foundation/Text';
 import FormCadastro from '../src/components/patterns/FormCadastro';

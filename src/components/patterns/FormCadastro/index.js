@@ -4,7 +4,7 @@ import successAnimation from './animations/success.json';
 import errorAnimation from './animations/error.json';
 import { Button } from '../../commons/Button';
 import TextField from '../../forms/TextField';
-import Box from '../../foundation/layout/Box';
+import { Box } from '../../foundation/layout/Box';
 import { Grid } from '../../foundation/layout/Grid';
 import Text from '../../foundation/Text';
 
