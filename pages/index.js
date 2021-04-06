@@ -1,43 +1,20 @@
 import React from 'react';
 import { Button } from '../src/components/commons/Button';
-import Footer from '../src/components/commons/Footer';
-import Menu from '../src/components/commons/Menu';
-import Modal from '../src/components/commons/Modal';
 import { Box } from '../src/components/foundation/layout/Box';
 import { Grid } from '../src/components/foundation/layout/Grid';
 import Text from '../src/components/foundation/Text';
-import FormCadastro from '../src/components/patterns/FormCadastro';
+import { WebsitePageContext } from '../src/components/wrappers/WebsitePage';
+import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
 
-export default function Home() {
-  const [isModalOpen, setModalState] = React.useState(false);
+function HomeScreen() {
+  const websitePageContext = React.useContext(WebsitePageContext);
 
   return (
     <Box
-      flex={1}
       display="flex"
-      flexWrap="wrap"
       flexDirection="column"
-      justifyContent="space-between"
-      backgroundImage="url(/images/bubbles.svg)"
-      backgroundRepeat="no-repeat"
-      backgroundPosition="bottom right"
+      flex="1"
     >
-      {/* isModalOpen && <Modal /> */}
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => {
-          setModalState(false);
-        }}
-      >
-        {(propsDoModal) => (
-          <FormCadastro propsDoModal={propsDoModal} />
-        )}
-      </Modal>
-
-      <Menu
-        onCadastrarClick={() => setModalState(true)}
-      />
-
       <Grid.Container
         marginTop={{
           xs: '32px',
@@ -85,7 +62,7 @@ export default function Home() {
               display="block"
               variant="primary.main"
               onClick={() => {
-                setModalState(!isModalOpen);
+                websitePageContext.toggleModalCadastro();
               }}
             >
               Cadastrar
@@ -103,8 +80,20 @@ export default function Home() {
         </Grid.Row>
 
       </Grid.Container>
-
-      <Footer />
     </Box>
   );
 }
+
+export default websitePageHOC(HomeScreen, {
+  pageWrapperProps: {
+    seoProps: {
+      headTitle: 'Home',
+    },
+    pageBoxProps: {
+      backgroundImage: 'url(/images/bubbles.svg)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom right',
+    },
+
+  },
+});
