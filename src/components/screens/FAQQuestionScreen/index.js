@@ -4,6 +4,7 @@ import { useTheme } from 'styled-components';
 import { Grid } from '../../foundation/layout/Grid';
 import { Box } from '../../foundation/layout/Box';
 import Text from '../../foundation/Text';
+import { Link } from '../../commons/Link';
 
 export default function FAQQuestionScreen({ category, question }) {
   const theme = useTheme();
@@ -42,16 +43,19 @@ export default function FAQQuestionScreen({ category, question }) {
             borderRadiusTheme
           >
             {category.questions.map((currentQuestion) => (
-              <Text
-                key={currentQuestion.slug}
-                as="li"
-                variant="paragraph2"
-                href={`/${currentQuestion.slug}`}
-                color="primary.main"
-                marginBottom="16px"
-              >
-                {currentQuestion.title}
-              </Text>
+              // eslint-disable-next-line react/style-prop-object
+              <li style={{ marginBottom: '10px' }}>
+                <Text
+                  key={currentQuestion.slug}
+                  as={Link}
+                  variant="paragraph2"
+                  href={`/faq/${currentQuestion.slug}`}
+                  color="primary.main"
+                  marginBottom="16px"
+                >
+                  {currentQuestion.title}
+                </Text>
+              </li>
             ))}
           </Box>
         </Grid.Col>
@@ -73,9 +77,9 @@ export default function FAQQuestionScreen({ category, question }) {
             as="p"
             variant="paragraph1"
             color="tertiary.light"
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: question.description }}
-          />
+          >
+            {question.description}
+          </Text>
         </Grid.Col>
       </Grid.Row>
     </Grid.Container>
