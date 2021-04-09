@@ -26,6 +26,9 @@ const Container = styled.div`
     `,
   })}
   ${propToStyle('marginTop')}
+  ${propToStyle('display')}
+  ${propToStyle('flex')}
+  ${propToStyle('alignItems')}
 `;
 
 export const Grid = {
@@ -36,10 +39,10 @@ export const Grid = {
     margin-right: -16px;
     margin-left: -16px;
     ${propToStyle('flex')}
-    ${propToStyle('marginTop')}
     ${propToStyle('marginLeft')}
     ${propToStyle('marginRight')}
     ${propToStyle('justifyContent')}
+    ${propToStyle('marginTop')}
     ${propToStyle('marginBottom')}
     ${propToStyle('flexDirection')}
   `,
@@ -136,10 +139,10 @@ export const Grid = {
     });
   }}
     ${propToStyle('display')}
+    ${propToStyle('order')}
     ${propToStyle('alignItems')}
     ${propToStyle('justifyContent')}
     ${propToStyle('flexDirection')}
     ${propToStyle('paddingRight')}
-    ${propToStyle('order')}
   `,
 };
