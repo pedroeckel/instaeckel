@@ -4,6 +4,7 @@ import { Logo } from '../../../theme/Logo';
 import Text from '../../foundation/Text';
 import { Button } from '../Button';
 import { MenuWrapper } from './styles/MenuWrapper';
+import { Link } from '../Link';
 
 const links = [
   {
@@ -24,7 +25,11 @@ export default function Menu({ onCadastrarClick }) {
   return (
     <MenuWrapper>
       <MenuWrapper.LeftSide>
-        <Logo />
+        <Link
+          href="/"
+        >
+          <Logo />
+        </Link>
       </MenuWrapper.LeftSide>
       <MenuWrapper.CentralSide>
         {links.map((link) => (
